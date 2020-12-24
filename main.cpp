@@ -2,7 +2,6 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <csignal>
-#include <X11/Xlib.h>
 
 void getVirtualDesktopDimensions(int* width, int* height);
 
