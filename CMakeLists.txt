@@ -18,3 +18,5 @@ find_package(glm REQUIRED)
 
 target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC glfw OpenGL::GL glm ${CMAKE_DL_LIBS})
 
+add_definitions(-DDEBUG_AUTO_CLOSE)
+

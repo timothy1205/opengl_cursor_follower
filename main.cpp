@@ -53,7 +53,12 @@ int main() {
 
     // Main application loop
     while (!interrupted) {
-
+        #ifdef DEBUG_AUTO_CLOSE
+        if (glfwGetTime() > 5) {
+            std::cout << "Debug: Auto closing..." << std::endl;
+            break;
+        }
+        #endif
     }
 
     glfwTerminate();
