@@ -25,11 +25,7 @@ int main() {
     glfwWindowHint(GLFW_FOCUS_ON_SHOW, GLFW_FALSE);
     glfwWindowHint(GLFW_FLOATING, GLFW_TRUE);
     glfwWindowHint(GLFW_TRANSPARENT_FRAMEBUFFER, GLFW_TRUE);
-
-    /* Wait for https://github.com/glfw/glfw/pull/1568 to be released in next GLFW verison
-     * glfwWindowHint(GLFW_MOUSE_PASSTHROUGH, GLFW_TRUE);
-     * TODO: Build latest version myself so I can continue
-     */
+    glfwWindowHint(GLFW_MOUSE_PASSTHROUGH, GLFW_TRUE);
 
     // Create window based on virtual desktop dimensions
     int width, height;
