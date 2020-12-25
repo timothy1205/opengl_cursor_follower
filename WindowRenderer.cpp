@@ -25,7 +25,7 @@ WindowRenderer::WindowRenderer(GLFWmonitor* monitor) {
 
 WindowRenderer::~WindowRenderer() = default;
 
-void WindowRenderer::render() {
+void WindowRenderer::render() const {
     if (!shouldRender()) return;
 
     glfwMakeContextCurrent(window);
@@ -38,11 +38,11 @@ void WindowRenderer::render() {
     glfwSwapBuffers(window);
 }
 
-bool WindowRenderer::shouldRender() {
+bool WindowRenderer::shouldRender() const {
     // TODO: Check if sprite is on window
     return true;
 }
 
-void WindowRenderer::drawSprite() {
+void WindowRenderer::drawSprite() const {
     // TODO: Tell opengl to render stored sprite
 }

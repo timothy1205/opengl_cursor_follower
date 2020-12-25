@@ -1,5 +1,6 @@
 #include "WindowRendererManager.h"
 #include "WindowRenderer.h"
+
 WindowRendererManager::WindowRendererManager() {
     int count;
     GLFWmonitor** monitors = glfwGetMonitors(&count);
@@ -9,10 +10,10 @@ WindowRendererManager::WindowRendererManager() {
     }
 }
 
-void WindowRendererManager::triggerRenderers() {
+WindowRendererManager::~WindowRendererManager() = default;
+
+void WindowRendererManager::triggerRenderers() const {
     for (auto render: renders) {
         render.render();
     }
 }
-
-WindowRendererManager::~WindowRendererManager() = default;

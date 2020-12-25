@@ -9,13 +9,13 @@ public:
     explicit WindowRenderer(GLFWmonitor* monitor);
     ~WindowRenderer();
 
-    void render();
+    void render() const;
 
 private:
     GLFWwindow* window;
 
-    bool shouldRender();
-    void drawSprite();
+    bool shouldRender() const;
+    void drawSprite() const;
 
 };
 

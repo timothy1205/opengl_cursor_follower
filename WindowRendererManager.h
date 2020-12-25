@@ -9,7 +9,7 @@ public:
     WindowRendererManager();
     ~WindowRendererManager();
 
-    void triggerRenderers();
+    void triggerRenderers() const;
 private:
     std::vector<WindowRenderer> renders;
 };
