@@ -9,8 +9,13 @@ public:
     explicit WindowRenderer(GLFWmonitor* monitor);
     ~WindowRenderer();
 
+    void render();
+
 private:
     GLFWwindow* window;
+
+    bool shouldRender();
+    void drawSprite();
 
 };
 

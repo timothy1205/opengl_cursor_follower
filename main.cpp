@@ -1,4 +1,4 @@
-#include "glad/glad.h"
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <csignal>
@@ -34,6 +34,9 @@ int main() {
 
     WindowRendererManager windowRendererManager;
 
+    float deltaTime = 0.f;
+    float lastTime = 0.f;
+
     // Main application loop
     while (!interrupted) {
         #ifdef DEBUG_AUTO_CLOSE
@@ -42,6 +45,12 @@ int main() {
             break;
         }
         #endif
+
+        auto currentTime = (float) glfwGetTime();
+        deltaTime = currentTime - lastTime;
+        lastTime = currentTime;
+
+        windowRendererManager.triggerRenderers();
     }
 
     glfwTerminate();
