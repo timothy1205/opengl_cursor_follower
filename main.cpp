@@ -2,6 +2,7 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <csignal>
+#include "WindowRendererManager.h"
 
 namespace {
     bool interrupted = false;
@@ -30,6 +31,8 @@ int main() {
     glfwWindowHint(GLFW_TRANSPARENT_FRAMEBUFFER, GLFW_TRUE);
     glfwWindowHint(GLFW_MOUSE_PASSTHROUGH, GLFW_TRUE);
     glfwWindowHint(GLFW_CENTER_CURSOR, GLFW_FALSE);
+
+    WindowRendererManager windowRendererManager;
 
     // Main application loop
     while (!interrupted) {
