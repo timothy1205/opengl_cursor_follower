@@ -6,7 +6,7 @@ set(DCMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
-set(SOURCE_FILES main.cpp glad/glad.c Renderer.cpp Renderer.h)
+set(SOURCE_FILES main.cpp glad/glad.c WindowRenderer.cpp WindowRenderer.h)
 
 include_directories("${PROJECT_SOURCE_DIR}/include")
 
