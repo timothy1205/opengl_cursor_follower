@@ -26,9 +26,6 @@ elseif (NOT X11_Xshape_FOUND)
     message(FATAL_ERROR "libXshape is required")
 endif ()
 
-message(${X11_Xfixes_INCLUDE_PATH})
-message(${X11_xcb_xfixes_LIB})
-
 include_directories(SYSTEM ${X11_xcb_INCLUDE_PATH})
 include_directories(SYSTEM ${X11_Xfixes_INCLUDE_PATH})
 include_directories(SYSTEM ${X11_Xcomposite_INCLUDE_PATH})
