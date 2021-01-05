@@ -1,22 +1,15 @@
 #ifndef OPENGL_CURSOR_FOLLOWER_WINDOWRENDERER_H
 #define OPENGL_CURSOR_FOLLOWER_WINDOWRENDERER_H
 
-#include "glad/glad.h"
-#include <GLFW/glfw3.h>
+#include "internal.h"
 
 class WindowRenderer {
 public:
-    explicit WindowRenderer(GLFWmonitor* monitor);
-    ~WindowRenderer();
-
-    void render() const;
-
+    virtual void setupOpenGL() const;
+    virtual void render() const;
+    virtual void setWindowTitle() const;
+    virtual WindowSize getVirtualScreenSize();
 private:
-    GLFWwindow* window;
-
-    bool shouldRender() const;
-    void drawSprite() const;
-
 };
 
 
