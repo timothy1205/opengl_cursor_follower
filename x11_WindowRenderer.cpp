@@ -9,8 +9,8 @@ x11_WindowRenderer::x11_WindowRenderer() {
     display = XOpenDisplay(nullptr);
 
     if (!display) {
-        // Failed to establish connection, quit
-        exit(1);
+        std::cerr << "Failed to create connection to x11 server\n";
+        exit(EXIT_FAILURE);
     }
 
     // Query for visual info
@@ -43,7 +43,8 @@ x11_WindowRenderer::x11_WindowRenderer() {
 
     context = glXCreateContext(display, &visualInfo, nullptr, True);
     if (!context) {
-        exit(1);
+        std::cerr << "Failed to create opengl context!\n";
+        exit(EXIT_FAILURE);
     }
     glXMakeCurrent(display, window, context);
 
