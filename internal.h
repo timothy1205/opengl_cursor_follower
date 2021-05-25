@@ -1,7 +1,3 @@
-//
-// Created by timothy on 1/5/21.
-//
-
 #ifndef OPENGL_CURSOR_FOLLOWER_INTERNAL_H
 #define OPENGL_CURSOR_FOLLOWER_INTERNAL_H
 
