@@ -1,0 +1,2 @@
+#cmakedefine USE_X11 @USE_X11@
+#cmakedefine DEBUG_AUTO_CLOSE @DEBUG_AUTO_CLOSE@
