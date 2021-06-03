@@ -1,7 +1,8 @@
 #ifndef OPENGL_CURSOR_FOLLOWER_OPENGL_H
 #define OPENGL_CURSOR_FOLLOWER_OPENGL_H
+#include "config.h"
 
-#ifdef _USE_X11
+#ifdef USE_X11
 #include <GL/glx.h>
 #endif
 

@@ -1,6 +1,8 @@
 #include <iostream>
 #include <csignal>
-#ifdef _USE_X11
+#include <unistd.h>
+#include "config.h"
+#ifdef USE_X11
 #include "x11_WindowRenderer.h"
 #endif
 
@@ -12,12 +14,13 @@ int main(int argc, char** argv) {
     // Handle program interruption
     std::signal(SIGINT, [](int) { interrupted = true; });
 
-#ifdef _USE_X11
+#ifdef USE_X11
     x11_WindowRenderer windowRenderer;
 #endif
 
     while (!interrupted) {
         windowRenderer.render();
+        usleep((1/60) * 1000000);
     }
 
 }
