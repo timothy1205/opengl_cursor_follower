@@ -9,7 +9,12 @@ public:
     virtual void render() const;
     virtual void setWindowTitle() const;
     virtual WindowSize getVirtualScreenSize();
+protected:
+    WindowRenderer();
+    WindowRenderer(bool debugBackground);
+
 private:
+    bool debugBackground = false;
 };
 
 

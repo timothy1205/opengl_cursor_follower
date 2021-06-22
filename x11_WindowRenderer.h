@@ -8,6 +8,7 @@
 class x11_WindowRenderer: virtual public WindowRenderer {
 public:
     x11_WindowRenderer();
+    x11_WindowRenderer(bool debugBackground);
     ~x11_WindowRenderer();
 
     void render() const override;

@@ -5,7 +5,9 @@
 #include "x11_WindowRenderer.h"
 #include "internal.h"
 
-x11_WindowRenderer::x11_WindowRenderer() {
+x11_WindowRenderer::x11_WindowRenderer(): x11_WindowRenderer(false) {}
+
+x11_WindowRenderer::x11_WindowRenderer(bool debugBackground): WindowRenderer(debugBackground){
     display = XOpenDisplay(nullptr);
 
     if (!display) {
